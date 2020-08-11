@@ -4,16 +4,105 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    tools:context=".MainActivity"
+    >
     <TextView
-        android:id="@+id/textView1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text = "TextView"
-        android:textSize="15dp"
-        android:fontFamily="sans-serif-black"
-        tools:ignore="MissingConstraints" />
+        android:id="@+id/main_text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/songmyungregular"
+        android:textSize="35dp"
+        android:textColor="#000000"
+        android:text="오늘의 운세"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <TextView
+        android:id="@+id/main_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이름"
+        android:fontFamily="@font/notoserifkrmedium"
+        android:textSize="25dp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/main_text_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        />
+    <EditText
+        android:id="@+id/main_edit_name"
+        android:layout_width="250dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintLeft_toRightOf="@id/main_name"
+        app:layout_constraintTop_toTopOf="@id/main_name"
+        app:layout_constraintBottom_toBottomOf="@id/main_name"
+        android:textColor="#000000"
+        />
 
-
+    <Button
+        android:id="@+id/datepicker_btn"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/button_design"
+        android:fontFamily="@font/notoserifkrmedium"
+        android:text="생년월일"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_edit_name" />
+    <TextView
+        android:id="@+id/main_text_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/main_edit_name"
+        android:text="년"
+        android:textSize="20dp"
+        android:fontFamily="@font/notoserifkrmedium"
+        app:layout_constraintRight_toRightOf="@id/main_text_month"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="45dp"
+        />
+    <TextView
+        android:id="@+id/main_text_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/main_edit_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="#000000"
+        android:text="월"
+        android:textSize="20dp"
+        android:fontFamily="@font/notoserifkrmedium"
+        android:layout_marginTop="45dp"
+        />
+    <TextView
+        android:id="@+id/main_text_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/main_edit_name"
+        app:layout_constraintLeft_toLeftOf="@id/main_text_month"
+        android:layout_marginLeft="60dp"
+        android:text="일"
+        android:textSize="20dp"
+        android:fontFamily="@font/notoserifkrmedium"
+        android:layout_marginTop="45dp"
+        />
+    <Button
+        android:id="@+id/main_nextscreen_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="다음으로"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/button_design"
+        android:layout_marginBottom="20dp"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
