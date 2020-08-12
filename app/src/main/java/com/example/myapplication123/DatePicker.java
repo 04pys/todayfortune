@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 public class DatePicker extends AppCompatActivity {
+    private int mYear =0, mMonth=0, mDay=0;
 
     android.widget.DatePicker datepicker_birthday;
     Button datepicker_btn;
