@@ -48,6 +48,9 @@ private TextView textView1;
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Print.class);
+                if(main_edit_name.getText()!=null){
+                    intent.putExtra("name",main_edit_name.getText().toString());
+                }
                 startActivity(intent);
             }
         });
@@ -62,6 +65,8 @@ private TextView textView1;
 //옥인성
 //        textView1 = (TextView)findViewById(R.id.textView1);
 //        textView1.setText(fortune);
+
+
     }
 
 }
